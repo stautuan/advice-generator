@@ -68,7 +68,7 @@ h1 {
   line-height: 1.35;
 }
 
-.advice__btn {
+button {
   cursor: pointer;
   position: absolute;
   bottom: 0;
@@ -85,11 +85,11 @@ h1 {
   justify-content: center;
 }
 
-.advice__btn:hover {
+button:hover {
   filter: drop-shadow(0 0 2em var(--clr-primary));
 }
 
-.attribution {
+footer {
   position: fixed;
   bottom: 0;
   font-size: 11px;
@@ -98,7 +98,7 @@ h1 {
   padding: 1rem;
 }
 
-.attribution a {
+footer a {
   color: var(--clr-secondary);
 }
 
