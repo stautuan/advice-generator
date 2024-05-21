@@ -23,7 +23,7 @@ Users should be able to:
 
 <img src="./assets/preview/my-solution-m.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
 
-[Demo](https://your-live-site-url.com)
+[Demo](https://stautuan.github.io/advice-generator/)
 
 ## Author
 
