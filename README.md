@@ -10,14 +10,6 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Generate a new piece of advice by clicking the dice icon
 
-### Preview
-
-<img src="./assets/preview/my-solution-m.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
-
-### Links
-
-- Live Site URL: [Demo](https://your-live-site-url.com)
-
 ### Built with
 
 ```
@@ -26,6 +18,12 @@ Users should be able to:
 - CSS Custom Properties
 - Advice Slip API
 ```
+
+## Preview
+
+<img src="./assets/preview/my-solution-m.png" height="500" style="border-radius:10px;margin-bottom:1rem;" />
+
+[Demo](https://your-live-site-url.com)
 
 ## Author
 
