@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --clr-primary: hsl(150, 100%, 66%);
+  --clr-secondary: hsl(228, 45%, 44%);
+  --clr-grey-1: hsl(193, 38%, 86%);
+  --clr-grey-2: hsl(217, 19%, 38%);
+  --clr-grey-3: hsl(217, 19%, 24%);
+  --clr-grey-4: hsl(218, 23%, 16%);
+  --font-sans: 'Manrope', sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--clr-grey-1);
+  background-color: var(--clr-grey-4);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 54rem;
+  height: 33.2rem;
+  margin: 0 auto;
+  background-color: var(--clr-grey-3);
+  border-radius: 2rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 4rem 6.85rem;
+  position: relative;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: -4px;
+}
+
+.advice__text {
+  line-height: 1.35;
+}
+
+.advice__btn {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  background-color: var(--clr-primary);
+  border: none;
+  transition: filter 300ms;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice__btn:hover {
+  filter: drop-shadow(0 0 2em var(--clr-primary));
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution a {
+  color: var(--clr-secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 37.45em) {
+  body {
+    font-size: 2.3rem;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  main {
+    width: 34.4rem;
+    height: 31.5rem;
+    padding: 5rem 3rem 6rem;
+  }
+}
