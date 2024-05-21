@@ -1,9 +1,11 @@
 'use strict';
 
 // Selectors
+const adviceContainer = document.querySelector('main');
 const adviceBtn = document.querySelector('.advice__btn');
 const adviceNumber = document.querySelector('.advice__number');
 const adviceText = document.querySelector('.advice__text');
+const loader = document.querySelector('.loader');
 
 function showError(
   message = 'Failed to fetch advice. Please try again later.'
@@ -12,7 +14,19 @@ function showError(
   adviceText.innerHTML = message;
 }
 
+function displayLoading() {
+  loader.classList.remove('hidden');
+  adviceContainer.classList.add('hidden');
+
+  setTimeout(() => {
+    loader.classList.add('hidden');
+    adviceContainer.classList.remove('hidden');
+  }, 2000);
+}
+
 async function getAdvice() {
+  displayLoading();
+
   try {
     const response = await fetch('https://api.adviceslip.com/advice');
     if (!response.ok) {
@@ -21,11 +35,13 @@ async function getAdvice() {
     const data = await response.json();
     const advice = data.slip;
 
-    if (advice) {
-      adviceNumber.innerHTML = `Advice #${advice.id}`;
-      adviceText.innerHTML = `"${advice.advice}"`;
-    } else {
+    if (!data) {
       showError();
+    } else {
+      setTimeout(() => {
+        adviceNumber.innerHTML = `Advice #${advice.id}`;
+        adviceText.innerHTML = `"${advice.advice}"`;
+      }, 1000);
     }
   } catch (error) {
     showError();

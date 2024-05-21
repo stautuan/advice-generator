@@ -34,6 +34,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -44,7 +45,7 @@ main {
   height: 33.2rem;
   margin: 0 auto;
   background-color: var(--clr-grey-3);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   text-align: center;
 
   display: flex;
@@ -89,6 +90,10 @@ button:hover {
   filter: drop-shadow(0 0 2em var(--clr-primary));
 }
 
+button:active {
+  filter: drop-shadow(0 0 1em var(--clr-primary));
+}
+
 footer {
   position: fixed;
   bottom: 0;
@@ -100,10 +105,43 @@ footer {
 
 footer a {
   color: var(--clr-secondary);
+  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
+.hidden {
+  display: none;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  --c: no-repeat linear-gradient(var(--clr-primary) 0 0);
+  background: var(--c) center/100% 10px, var(--c) center/10px 100%;
+}
+
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--c) 0 0, var(--c) 100% 0, var(--c) 0 100%, var(--c) 100% 100%;
+  background-size: 15.5px 15.5px;
+  animation: l16 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes l16 {
+  33% {
+    inset: -10px;
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -10px;
+    transform: rotate(90deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
 }
 
 @media screen and (max-width: 37.45em) {
